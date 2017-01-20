@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  width: 100%;
+  font-family: Open Sans;
+}
+
+#main {
+  width: 80%;
+  min-width: 300px;
+  display: block;
+  margin: 30px auto;
+}
+#main img {
+  width: 30%;
+}
+
+#number {
+  margin-top: 0;
+  font-size: 80px;
+}
+
+button {
+  font-size: 22px;
+  padding: 10px;
+  margin: 0 20px;
+}

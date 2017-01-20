@@ -4,17 +4,20 @@
   <title>Call Trump!</title>
   <script type="text/javascript" src="js/tinyxhr.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+  <div id="main">
+    <img src="images/phone.jpg">
+    <h3>Are you trying to contact our commander in chief - but the White House ain't picking up?</h3>
+    <h4>Why don't you try...</h4>
+    <h1 id="number"></h1>
+    <h2 id="place"></h2>
 
-  <h3>Are you trying to contact our commander in chief - but the White House ain't picking up?</h3>
-  <h4>Why don't you try...</h4>
-  <h1 id="number"></h1>
-  <h2 id="place"></h2>
-
-  <h4>Did it work?</h4>
-  <button onClick="report(this)" answer="yes">Yes</button>
-  <button onClick="report(this)" answer="no">No</button>
-
+    <h4>Did it work?</h4>
+    <button onClick="report(this)" answer="yes">Yes</button>
+    <button onClick="report(this)" answer="no">No</button>
+  </div>
 </body>
 </html>
