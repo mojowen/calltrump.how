@@ -1,9 +1,19 @@
 var url = "https://spreadsheets.google.com/feeds/list/1fj1BaowFV-ba2XIyjbdbllZzfwnqbqxUMQykP03171E/od6/public/basic?alt=json";
 
-var now = new Date;
+var numbers = []
+
+var pics = ['phone.jpg',
+            'phone2.png',
+            'phone3.jpg',
+            'phone4.jpg',
+            'phone5.jpg',
+            'phone6.jpg',
+            'phone7.jpg',
+            'phone8.png']
+var pic = -1
 
 tinyGET(url, null, function(data) {
-  var numbers = data.feed.entry.map( function(el) {
+  window.numbers = data.feed.entry.map( function(el) {
     var obj = { location: el.title['$t'] },
         data = el.content['$t'].split(',')
 
@@ -16,12 +26,25 @@ tinyGET(url, null, function(data) {
     return obj
   }).filter(function(el) { return el.numberactive === 'Active' })
 
-  var number = numbers[Math.round(Math.random() * numbers.length)]
+  anotherOne()
+  document.getElementById('another').style.display = "block"
+});
+
+function anotherOne() {
+  var current = document.getElementById('number').textContent
+      number = window.numbers.filter(function(el) {
+        return current !== el.phonenumber
+      })[Math.floor(Math.random() * (numbers.length - 1))]
 
   document.getElementById('number').textContent = number.phonenumber
   document.getElementById('place').textContent = number.location
-});
 
+  pic += 1
+  if( typeof pics[pic] === 'undefined' ) pic = 0
+  document.getElementById('the_pic').src = 'images/'+pics[pic]
+
+  return false
+}
 
 function report(elem) {
   var did_it_work = elem.getAttribute('answer')
