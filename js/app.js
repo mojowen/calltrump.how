@@ -31,9 +31,11 @@ tinyGET(url, null, function(data) {
   anotherOne()
 
   document.getElementById('another').style.display = "block"
-  document.getElementById('made_calls').style.display = "inline-block"
   document.getElementById('total').textContent = numbers.reduce(function(sum, el) {
-    return sum += parseInt(el.callsmade) }, 0)
+    return sum += parseInt(el.callsmade)
+  }, 0)
+  document.getElementById('made_calls').style.display = "inline-block"
+
 });
 
 function anotherOne(did_call) {
