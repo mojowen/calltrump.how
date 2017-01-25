@@ -22,6 +22,8 @@
   <meta property="og:image" content="https://calltrump.how/images/phone.jpg">
   <meta property="og:type" content="website">
 
+  <meta name="twitter:site" content="@calltrump" ">
+  <meta name="twitter:creator" content="@calltrump" ">
   <meta name="twitter:card" content="summary" ">
   <meta name="twitter:title" content="How to Call President Trump">
   <meta name="twitter:description" content="The White House is apparently not taking calls anymore. Here are some other numbers to reach the Command in Chief.">
@@ -40,6 +42,12 @@
     <button onClick="report(this)" answer="yes">Yes</button>
     <button onClick="report(this)" answer="no">No</button>
     <p><a style="display:none" href="#" id="another" onClick="anotherOne()">Another One</a></p>
+    <p>
+      Want to suggest a number? <a href="https://twitter.com/CallTrump" target="_blank">tweet us</a>.
+    </p>
+    <p id="made_calls">
+      So far we've made <span id="total"></span> calls.
+    </p>
   </div>
 
   <script>
@@ -57,7 +65,6 @@
 
     ga('create', 'UA-86946159-2', 'auto');
     ga('send', 'pageview');
-
   </script>
 </body>
 </html>
